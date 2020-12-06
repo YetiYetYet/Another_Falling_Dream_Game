@@ -9,7 +9,7 @@ public class PlayerManager : PlayableCharacter
     protected override void OnTriggerEnter(Collider other)
     {
         Debug.Log("Player collide with + " + other.gameObject.name);
-        if (other.tag.Equals("props"))
+        if (other.tag.Equals("Props"))
         {
             Debug.Log("I kill this player");
             LevelManager.Instance.KillCharacter(this);
