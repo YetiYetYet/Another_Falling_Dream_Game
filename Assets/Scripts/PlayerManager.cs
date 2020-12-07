@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class PlayerManager : PlayableCharacter
 {
+    private Vector3 _lastPosition;
+    private Vector3 _position;
+    public Vector3 direction;
     protected override void OnTriggerEnter(Collider other)
     {
         Debug.Log("Player collide with + " + other.gameObject.name);
@@ -16,12 +19,22 @@ public class PlayerManager : PlayableCharacter
         }
     }
 
+    protected override void Start()
+    {
+        base.Start();
+        _position = transform.position;
+        _lastPosition = _position;
+    }
+
     protected override void Update()
     {
-        // we send our various states to the animator.      
-        UpdateAnimator ();
-
-        // if we're supposed to reset the player's position, we lerp its position to its initial position
-        ResetPosition();
+        _position = transform.position;
+        direction =  _position - _lastPosition ;
+        if (direction.y > 0)
+        {
+            Debug.Log("i go up");
+        }
+        direction.Normalize();
+        _lastPosition = _position;
     }
 }
