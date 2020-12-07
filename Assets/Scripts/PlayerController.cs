@@ -36,8 +36,15 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("I go up");
         }
-        else if(_target.y == transform.position.y)
-        
+        else if (Math.Abs(_target.y - transform.position.y) < 0.1f)
+        {
+            Debug.Log("no y movement");
+        }
+        else
+        {
+            Debug.Log("move down");
+        }
+
         _ray = _camera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(_ray.origin, _ray.direction, out RaycastHit hit, Mathf.Infinity, movableLayer))
         {
