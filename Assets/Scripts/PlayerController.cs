@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask movableLayer;
     public Vector3 playerOffset;
     public float deltaY;
-    public float deltaZ;
     public float animatorTolerance = 0.1f;
 
     public Animator animator;
@@ -23,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 _mousePosition;
 
     private Vector3 _initialRotation;
+    private Vector3 _targetRotation;
     
     private Ray _ray;
 
@@ -35,17 +35,23 @@ public class PlayerController : MonoBehaviour
         _camera = Camera.main;
         _target = transform.position;
         _initialRotation = transform.eulerAngles;
+        _targetRotation = _initialRotation;
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.eulerAngles = _initialRotation;
+        transform.eulerAngles = _targetRotation;
+
         deltaY = _target.y - transform.position.y;
         if (Math.Abs(deltaY) > animatorTolerance)
         {
-            Debug.Log(deltaY > 0);
             animator.SetBool("MovingFoward", deltaY > 0);
+        }
+        else
+        {
+            animator.SetBool("MovingFoward", true);
         }
 
         _ray = _camera.ScreenPointToRay(Input.mousePosition);
