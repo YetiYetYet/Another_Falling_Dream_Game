@@ -2,7 +2,7 @@
 
 A little game where you need to type words before they reach you. Time increase difficulty 
 
-![Gameplay](https://i.imgur.com/US2vNZb.gif)
+![Imgur](https://imgur.com/FrMhPsR)
 
 Feel free to use and modify this project. 
 Do not hesitate to contact me if you have any question.
