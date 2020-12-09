@@ -6,6 +6,7 @@ A little game where you need to type words before they reach you. Time increase 
 
 Feel free to use and modify this project. 
 Do not hesitate to contact me if you have any question.
+You need to use the following assets.
 
 ## Assets Used
 
