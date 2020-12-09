@@ -1494,8 +1494,8 @@ MonoBehaviour:
   Spawning: 1
   OnlySpawnWhileGameInProgress: 1
   InitialDelay: 2.06
-  MinSpawnTime: 0.5
-  MaxSpawnTime: 1
+  MinSpawnTime: 0.3
+  MaxSpawnTime: 0.6
   MinPosition: {x: 0, y: -3.5, z: -6}
   MaxPosition: {x: 0, y: 3.5, z: 6}
 --- !u!114 &312514013
@@ -3106,7 +3106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3369c675a677747bde4a857aee7f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: LevelSelection
+  LevelName: Menu
 --- !u!114 &671652531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3119,7 +3119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3369c675a677747bde4a857aee7f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: LevelSelection
+  LevelName: Menu
 --- !u!114 &671655501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8613,7 +8613,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1587576540
 MonoBehaviour:
   m_ObjectHideFlags: 0

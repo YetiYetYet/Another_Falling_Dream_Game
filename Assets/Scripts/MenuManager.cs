@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    public Button playButton;
-    //public Button settingsButton;
-    public Button creditButton;
-    
     public GameObject mainMenu;
     //public GameObject settingsMenu;
     public GameObject creditMenu;
