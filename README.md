@@ -1,6 +1,6 @@
 # Another Word Falling Game
 
-A little game where you need to type words before they reach you. Time increase difficulty 
+A little game where you need to avoid items before they reach you. Time increase difficulty 
 
 ![Gameplay](https://imgur.com/wt1ud9S.gif)
 
